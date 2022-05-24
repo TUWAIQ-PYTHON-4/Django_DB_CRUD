@@ -1,14 +1,29 @@
-# Django_DB_CRUD
+# Django_HW_2
 
 
-### CRUD on Project Management Application
+### Project Management Application
 
-In your previous project management application(PMProject), Complete the following steps:
+Imagine you are developing a project management application called PMProject. PMProject is an application that can track multiple projects, and each project can have multiple tasks associated with it. 
 
-1. Use __str__(self) method.
-2. Add relationship one-many in Task Model (Any project should have many tasks).
-3. Create the migration scripts and migrate the models
-4. Create Project Object 
-5. Create tasks for the project
-6. List all the tasks associated with the project using all()
-7. List all the tasks associated with the project using filter()
+
+The following steps will help you complete your task:
+
+1. Create a Django project called PMProject.
+2. Create a Django app called PMApp.
+3. Create two related model classes.
+
+    - Project
+        - name (CharField, use max_length and help_text)
+        - creation_time (DateTimeField, use auto_now_add and help_text)
+        - completion_time (DateTimeField, use null and help_text)
+        
+    - Task
+        - title (CharField, use max_length and help_text)
+        - description (TextField, use help_text)
+        - time_estimate (IntegerField, use help_text)
+        - completed (BooleanField, use default=False)
+4. Create migration scripts and migrate the models' definitions to the database.
+
+#### Additional Practices:
+- Use __str__(self) method.
+- Add relationship one-many in Task Model (Any project should have many tasks).
